@@ -1,5 +1,6 @@
 package ar.edu.unpaz.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unpaz.domain.Libro;
@@ -12,10 +13,13 @@ public class LibroController implements ILibroController{
 	}
 	
 	@Override
-	public String mostrarLibros() {
+	public List<String> mostrarLibros() {
 		// TODO Auto-generated method stub
 		List<Libro> libros = this.service.getAll();
-		return null;
+		List<String> librosHeader = new ArrayList<String>();
+		libros.forEach(libro -> librosHeader.add(String.format("ID: %s Titulo: %s", libro.getId() ,libro.getTitulo())));
+		
+		return librosHeader;
 	}
 
 	@Override

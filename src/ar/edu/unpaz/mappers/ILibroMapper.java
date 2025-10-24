@@ -5,5 +5,5 @@ import ar.edu.unpaz.domain.Libro;
 
 public interface ILibroMapper {
 	Libro toDomain(ResultSet setBBDD);
-	Boolean toPersistence();
+	String mapToPersistence(Libro libro);
 }

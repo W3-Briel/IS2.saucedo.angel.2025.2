@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class SessionDB implements ISessionDB { 
 
-    private static final String DB_URL = "jdbc:sqlite:mi_base_de_datos.db";
+    private static final String DB_URL = "jdbc:sqlite:bbdd/biblioteca.db";
     private Connection conn;
     
     private SessionDB() {

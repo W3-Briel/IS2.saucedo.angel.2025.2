@@ -13,14 +13,12 @@ public class LibroService implements ILibroService{
 	
 	@Override
 	public List<Libro> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.repository.getAll();
 	}
 
 	@Override
 	public Libro getById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.repository.getById(id);
 	}
 
 }

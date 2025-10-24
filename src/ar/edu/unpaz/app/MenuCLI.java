@@ -10,6 +10,9 @@ public class MenuCLI {
 	}
 
 	public void mostrarLibros() {
-		System.out.print(this.controller.mostrarLibros());
+		System.out.println("--- LIBROS ---");
+		
+		this.controller.mostrarLibros()
+			.forEach(System.out::println);
 	}
 }
