@@ -32,7 +32,6 @@ public class SessionDB implements ISessionDB {
         return this.conn;
     }
 
-    // 3. @Override del método de la interfaz
     @Override
     public void close() {
         try {

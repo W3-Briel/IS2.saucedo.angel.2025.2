@@ -44,7 +44,7 @@ public class LibroRepository implements ILibroRepository{
 	@Override
 	public Libro getById(Integer id) {
 		Libro libro = null;
-		String sql = "SELECT * FROM libros WHERE id = ?"; // Usamos '?' para un PreparedStatement
+		String sql = "SELECT * FROM libros WHERE ID_Libro = ?"; // Usamos '?' para un PreparedStatement
 		
 		try (Connection conn = db.getConnection();
 			 PreparedStatement pstmt = conn.prepareStatement(sql)) {

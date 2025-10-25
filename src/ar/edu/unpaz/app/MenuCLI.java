@@ -15,4 +15,8 @@ public class MenuCLI {
 		this.controller.mostrarLibros()
 			.forEach(System.out::println);
 	}
+	public void detalleLibro() {
+		System.out.println("-- DETALLE --");
+		System.out.println(this.controller.detalleLibro(4));
+	}
 }

@@ -25,10 +25,9 @@ public class Main {
 		ILibroService libroService = new LibroService(libroRepository);
 		ILibroController libroController = new LibroController(libroService);
 		
-		
 		MenuCLI consola = new MenuCLI(libroController);
-		consola.mostrarLibros();
-		
+//		consola.mostrarLibros();
+		consola.detalleLibro();
 	}
 
 }
