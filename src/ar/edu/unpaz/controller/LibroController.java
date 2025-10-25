@@ -25,10 +25,17 @@ public class LibroController implements ILibroController{
 	@Override
 	public String detalleLibro(Integer id) {
 		Libro libro = this.service.getById(id);
+		try {
+			if (libro == null) {
+				throw new Error("--> No se encontro un libro con esa ID");
+			}
+		} catch (Error e) {
+			return e.getMessage();
+		}
 		return String.format("--> ID: %d, Titulo: %s, ISBN: %s, Ubicacion: %s, ejemplares: %s",
 				libro.getId(), libro.getTitulo(),
 				libro.getISBN(),libro.getUbicacion_fisica(),
-				libro.getCantidad_total_ejemplares());
+				libro.getCantidad_total_ejemplares());	
 	}
 
 }

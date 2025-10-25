@@ -17,6 +17,7 @@ public class MenuCLI {
 	}
 	public void detalleLibro() {
 		System.out.println("-- DETALLE --");
-		System.out.println(this.controller.detalleLibro(4));
+		// validar que la id ingresada sea un numero.
+		System.out.println(this.controller.detalleLibro(123123));
 	}
 }
