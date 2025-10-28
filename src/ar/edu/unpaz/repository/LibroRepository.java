@@ -7,9 +7,11 @@ import ar.edu.unpaz.mappers.ILibroMapper;
 
 public class LibroRepository implements ILibroRepository{
 	private ILibroMapper mapper;
+	private ISessionDB db;
 	
-	public LibroRepository(ILibroMapper mapper) {
+	public LibroRepository(ILibroMapper mapper, ISessionDB db) {
 		this.mapper = mapper;
+		this.db = db;
 	}
 	
 	@Override
